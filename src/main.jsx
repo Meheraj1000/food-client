@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Home from './Home';
 import AvailableFoods from './AvailableFoods';
+import FoodDatial from './FoodDatial';
+import AddFood from './AddFood';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,7 +16,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/available-foods",
-    element:<AvailableFoods></AvailableFoods>
+    element:<AvailableFoods></AvailableFoods>,
+    loader:()=>fetch('http://localhost:3000/food')
+  },
+  {
+    path: "/food/:id",
+    element:<FoodDatial></FoodDatial>,
+    loader:({params})=> fetch(`http://localhost:3000/food/${params.id}`)
+  },
+  {
+    path: "/add-food",
+    element:<AddFood></AddFood>
   },
 ]);
 
