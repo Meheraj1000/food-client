@@ -5,10 +5,16 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Home from './Home';
+import AvailableFoods from './AvailableFoods';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div className='text-4xl'>Hello world!</div>,
+    element:<Home></Home>
+  },
+  {
+    path: "/available-foods",
+    element:<AvailableFoods></AvailableFoods>
   },
 ]);
 
