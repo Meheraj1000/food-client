@@ -9,6 +9,7 @@ import Home from './Home';
 import AvailableFoods from './AvailableFoods';
 import FoodDatial from './FoodDatial';
 import AddFood from './AddFood';
+import AutProvider from './AutProvider';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <RouterProvider router={router} />
+     <AutProvider routes={<RouterProvider router={router} />}></AutProvider>
   </StrictMode>,
 )
