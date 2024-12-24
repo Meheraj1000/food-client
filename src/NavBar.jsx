@@ -15,7 +15,7 @@ const NavBar = () => {
                     Available Foods
                 </NavLink>
             </li>
-            {/* <li>
+            <li>
                 <NavLink to="/add-food" activeClassName="active">
                     Add Food
                 </NavLink>
@@ -24,7 +24,7 @@ const NavBar = () => {
                 <NavLink to="/manage-foods" activeClassName="active">
                     Manage My Foods
                 </NavLink>
-            </li> */}
+            </li>
             <li>
                 <NavLink to="/my-requests" activeClassName="active">
                     My Food Requests
