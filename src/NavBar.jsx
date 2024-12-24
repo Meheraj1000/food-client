@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { authContext } from './AutProvider';
 
 const NavBar = () => {
+  const{user,handeLogout}=useContext(authContext)
    const link=<>
     <li>
                 <NavLink to="/" activeClassName="active">
@@ -13,18 +15,18 @@ const NavBar = () => {
                     Available Foods
                 </NavLink>
             </li>
-            <li>
+            {/* <li>
                 <NavLink to="/add-food" activeClassName="active">
                     Add Food
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/my-foods" activeClassName="active">
+                <NavLink to="/manage-foods" activeClassName="active">
                     Manage My Foods
                 </NavLink>
-            </li>
+            </li> */}
             <li>
-                <NavLink to="/food-requests" activeClassName="active">
+                <NavLink to="/my-requests" activeClassName="active">
                     My Food Requests
                 </NavLink>
             </li>
@@ -61,7 +63,12 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Login</a>
+  {user?.email ? (
+                    <div className="flex justify-center items-center gap-3">
+                        <div><img className="w-7 h-7 rounded-full" src={user.photoURL} alt="" /></div>
+                        <button onClick={handeLogout} className="btn">LogOut</button>
+                    </div>) :
+                    (<NavLink to='/login'><button className="btn btn-sm">Login Now</button></NavLink>)}
   </div>
 </div>
     );

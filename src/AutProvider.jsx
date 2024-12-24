@@ -1,13 +1,15 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import {  createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import auth from './firebase.init';
 
 
-export const authContext=createContext()
-const useAuth=()=> useContext(authContext)
+// export const authContext=createContext()
+// export const useAuth=()=> useContext(authContext)
 
 const AutProvider = ({routes}) => {
     const[user,setUser]=useState(null)
     const[loading,setLoading]=useState(true)
+    // const [loggedInUser, setLoggedInUser] = useState(null);
     const googleProvider=new GoogleAuthProvider
     const handelRegister =(email,password)=>{
         setLoading(true);
@@ -42,8 +44,7 @@ const AutProvider = ({routes}) => {
         handelRegister,
         handelLogin,
         handelGoogleLogin,
-        handeLogout
-
+        handeLogout,
     }
    
     return (
