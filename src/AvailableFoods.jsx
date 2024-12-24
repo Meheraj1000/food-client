@@ -5,15 +5,15 @@ import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 
 const AvailableFoods = () => {
-//     const [isThreeColumn, setIsThreeColumn] = useState(true);
-//   const [searchQuery, setSearchQuery] = useState('');
+    const [isThreeColumn, setIsThreeColumn] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
 
  
-//   const { data: foods = [], isLoading, isError } = useQuery({
-//     queryKey: ['foods'],
-//     queryFn: async () => {
-//       const response = await axios.get('http://localhost:3000/food');
-//       return response.data;
+  const { data: foods = [], isLoading, isError } = useQuery({
+    queryKey: ['foods'],
+    queryFn: async () => {
+      const response = await axios.get('http://localhost:3000/food');
+      return response.data;
     },
   });
 
