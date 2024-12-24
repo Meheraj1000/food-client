@@ -86,7 +86,7 @@ const Register = () => {
                             required
                         />
                     </div>
-                    {/* <div className="form-control mb-4">
+                    <div className="form-control mb-4">
                         <label className="label font-bold">Confirm Password</label>
                         <input
                             type="password"
@@ -95,7 +95,7 @@ const Register = () => {
                             onChange={(e) => setConfirmPassword(e.target.value)}
                             className="input input-bordered"
                             required
-                        /> */}
+                        />
                     </div>
                     <button type="submit" className="btn btn-primary mt-4 w-full">
                         Register
