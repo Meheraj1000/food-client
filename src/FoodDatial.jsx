@@ -5,13 +5,13 @@ import axios from 'axios';
 import { useAuth } from './AutProvider';
 
 const FoodDatial = () => {
-    // const { id } = useParams();
-    // const navigate = useNavigate();
-    // const { user } = useAuth();
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const { user } = useAuth();
 
-    // const [food, setFood] = useState(null);
-    // const [isModalOpen, setIsModalOpen] = useState(false);
-    // const [notes, setNotes] = useState('');
+    const [food, setFood] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [notes, setNotes] = useState('');
 
     useEffect(() => {
         axios
