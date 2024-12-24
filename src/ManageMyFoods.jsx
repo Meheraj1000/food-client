@@ -4,18 +4,18 @@ import axios from 'axios';
 import NavBar from './NavBar';
 
 const ManageMyFoods = () => {
-//     const { user } = useAuth();
-//   const [foods, setFoods] = useState([]);
-//   const [isModalOpen, setIsModalOpen] = useState(false);
-//   const [selectedFood, setSelectedFood] = useState(null);
+    const { user } = useAuth();
+  const [foods, setFoods] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedFood, setSelectedFood] = useState(null);
 
-//   useEffect(() => {
-//     if (user) {
-//       axios
-//         .get(`http://localhost:3000/user-foods?email=${user.email}`)
-//         .then((res) => setFoods(res.data))
-//         .catch((err) => console.error(err));
-//     }
+  useEffect(() => {
+    if (user) {
+      axios
+        .get(`http://localhost:3000/user-foods?email=${user.email}`)
+        .then((res) => setFoods(res.data))
+        .catch((err) => console.error(err));
+    }
   }, [user]);
 
   const handleDelete = async (id) => {
