@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FoodCard = ({ food }) => {
-  // const {
-  //   _id,
-  //   foodName,
-  //   foodImage,
-  //   foodQuantity,
-  //   pickupLocation,
-  //   expiredDate,
-  //   additionalNotes,
-  //   foodStatus,
-  // } = food;
+  const {
+    _id,
+    foodName,
+    foodImage,
+    foodQuantity,
+    pickupLocation,
+    expiredDate,
+    additionalNotes,
+    foodStatus,
+  } = food;
 
   const statusStyles = {
     available: 'bg-green-100 text-green-700',
