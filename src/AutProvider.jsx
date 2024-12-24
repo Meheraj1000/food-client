@@ -3,8 +3,8 @@ import {  createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged
 import auth from './firebase.init';
 
 
-// export const authContext=createContext()
-// export const useAuth=()=> useContext(authContext)
+export const authContext=createContext()
+export const useAuth=()=> useContext(authContext)
 
 const AutProvider = ({routes}) => {
     const[user,setUser]=useState(null)
