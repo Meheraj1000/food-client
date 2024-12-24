@@ -9,7 +9,6 @@ export const useAuth=()=> useContext(authContext)
 const AutProvider = ({routes}) => {
     const[user,setUser]=useState(null)
     const[loading,setLoading]=useState(true)
-    // const [loggedInUser, setLoggedInUser] = useState(null);
     const googleProvider=new GoogleAuthProvider
     const handelRegister =(email,password)=>{
         setLoading(true);

@@ -49,10 +49,10 @@ const AddFood = () => {
           foodStatus: "available",
         });
       }
-    // } catch (error) {
-    //   console.error(error);
-    //   alert("Failed to add food.");
-    // }
+    } catch (error) {
+      console.error(error);
+      alert("Failed to add food.");
+    }
   };
     return (
         <>
