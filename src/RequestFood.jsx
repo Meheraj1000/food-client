@@ -4,22 +4,22 @@ import { useAuth } from './AutProvider';
 import axios from 'axios';
 
 const RequestFood = () => {
-    // const { user } = useAuth();
-    // const [foodRequests, setFoodRequests] = useState([]);
-    // const [loading, setLoading] = useState(true);
+    const { user } = useAuth();
+    const [foodRequests, setFoodRequests] = useState([]);
+    const [loading, setLoading] = useState(true);
   
-    // useEffect(() => {
-    //   if (user) {
-    //     axios
-    //       .get(`http://localhost:3000/food-requests?email=${user.email}`)
-    //       .then((res) => {
-    //         setFoodRequests(res.data);
-    //         setLoading(false);
-    //       })
-    //       .catch((err) => {
-    //         console.error(err);
-    //         setLoading(false);
-    //       });
+    useEffect(() => {
+      if (user) {
+        axios
+          .get(`http://localhost:3000/food-requests?email=${user.email}`)
+          .then((res) => {
+            setFoodRequests(res.data);
+            setLoading(false);
+          })
+          .catch((err) => {
+            console.error(err);
+            setLoading(false);
+          });
       }
     }, [user]);
   
