@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from './AutProvider';
 import axios from 'axios';
 import NavBar from './NavBar';
+import Footer from './Footer';
 
 const ManageMyFoods = () => {
     const { user } = useAuth();
@@ -71,7 +72,7 @@ const ManageMyFoods = () => {
               <td className="border px-4 py-2">
                 {new Date(food.expiredDateTime).toLocaleString()}
               </td>
-              <td className="border px-4 py-2">
+              <td className="border flex justify-center  px-4 py-2">
                 <button
                   onClick={() => openUpdateModal(food)}
                   className="bg-blue-500 text-white px-4 py-2 rounded-lg mr-2"
@@ -137,7 +138,8 @@ const ManageMyFoods = () => {
       )}
     </div>
 
-            
+          <div className='pt-8'>
+          <Footer></Footer></div>  
         </div>
     );
 };

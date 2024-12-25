@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import FoodCard from './FoodCard';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
+import Footer from './Footer';
 
 const AvailableFoods = () => {
     const [isThreeColumn, setIsThreeColumn] = useState(true);
@@ -63,6 +64,7 @@ const AvailableFoods = () => {
           )}
         </div>
       </div>
+      <Footer></Footer>
         </>
     );
 };

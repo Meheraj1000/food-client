@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavBar from './NavBar';
 import { useAuth } from './AutProvider';
 import axios from 'axios';
+import Footer from './Footer';
 
 const AddFood = () => {
     const { user } = useAuth();
@@ -132,6 +133,7 @@ const AddFood = () => {
         </button>
       </form>
     </div>
+    <Footer></Footer>
         </>
     );
 };
