@@ -15,11 +15,13 @@ import Register from './Register';
 import Login from './Login';
 import RequestFood from './RequestFood';
 import ManageMyFoods from './ManageMyFoods';
+import Error from './Error';
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<Home></Home>
+    element:<Home></Home>,
+    errorElement:<Error></Error>
   },
   {
     path: "/available-foods",
