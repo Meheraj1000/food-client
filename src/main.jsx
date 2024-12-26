@@ -16,6 +16,7 @@ import Login from './Login';
 import RequestFood from './RequestFood';
 import ManageMyFoods from './ManageMyFoods';
 import Error from './Error';
+import PrivateRoute from './PrivateRoute';
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/add-food",
-    element:<AddFood></AddFood>
+    element:<PrivateRoute><AddFood></AddFood></PrivateRoute>
   },
   {
     path: "/Login",
@@ -47,11 +48,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/my-requests",
-    element:<RequestFood></RequestFood>
+    element:<PrivateRoute><RequestFood></RequestFood></PrivateRoute>
   },
   {
     path: "/manage-foods",
-    element:<ManageMyFoods></ManageMyFoods>
+    element:<PrivateRoute><ManageMyFoods></ManageMyFoods></PrivateRoute>
   },
 ]);
 
