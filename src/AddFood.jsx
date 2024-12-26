@@ -37,7 +37,7 @@ const AddFood = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:3000/food", foodData);
+      const response = await axios.post("https://assignment-11-food-server-jade.vercel.app/food", foodData);
       if (response.data.insertedId) {
         alert("Food added successfully!");
         setFormData({

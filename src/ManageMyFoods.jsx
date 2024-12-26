@@ -13,7 +13,7 @@ const ManageMyFoods = () => {
   useEffect(() => {
     if (user) {
       axios
-        .get(`http://localhost:3000/user-foods?email=${user.email}`)
+        .get(`https://assignment-11-food-server-jade.vercel.app/user-foods?email=${user.email}`)
         .then((res) => setFoods(res.data))
         .catch((err) => console.error(err));
     }
@@ -22,7 +22,7 @@ const ManageMyFoods = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this food?')) {
       try {
-        await axios.delete(`http://localhost:3000/food/${id}`);
+        await axios.delete(`https://assignment-11-food-server-jade.vercel.app/food/${id}`);
         setFoods(foods.filter((food) => food._id !== id));
         alert('Food deleted successfully!');
       } catch (error) {
@@ -35,7 +35,7 @@ const ManageMyFoods = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/food/${selectedFood._id}`, selectedFood);
+      await axios.put(`https://assignment-11-food-server-jade.vercel.app/food/${selectedFood._id}`, selectedFood);
       setFoods(foods.map((food) => (food._id === selectedFood._id ? selectedFood : food)));
       setIsModalOpen(false);
       alert('Food updated successfully!');

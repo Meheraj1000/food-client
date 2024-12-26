@@ -15,7 +15,7 @@ const FoodDatial = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3000/food/${id}`)
+            .get(`https://assignment-11-food-server-jade.vercel.app/food/${id}`)
             .then((res) => setFood(res.data))
             .catch((err) => console.error(err));
     }, [id]);
@@ -40,8 +40,8 @@ const FoodDatial = () => {
         };
 
         try {
-            await axios.post('http://localhost:3000/food-requests', requestData);
-            await axios.put(`http://localhost:3000/food/${food._id}`, {
+            await axios.post('https://assignment-11-food-server-jade.vercel.app/food-requests', requestData);
+            await axios.put(`https://assignment-11-food-server-jade.vercel.app/food/${food._id}`, {
                 foodStatus: 'requested',
             });
 

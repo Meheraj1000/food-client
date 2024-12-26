@@ -27,12 +27,12 @@ const router = createBrowserRouter([
   {
     path: "/available-foods",
     element:<AvailableFoods></AvailableFoods>,
-    // loader:()=>fetch('http://localhost:3000/food')
+    // loader:()=>fetch('https://assignment-11-food-server-jade.vercel.app/food')
   },
   {
     path: "/food/:id",
     element:<FoodDatial></FoodDatial>,
-    loader:({params})=> fetch(`http://localhost:3000/food/${params.id}`)
+    loader:({params})=> fetch(`https://assignment-11-food-server-jade.vercel.app/food/${params.id}`)
   },
   {
     path: "/add-food",
