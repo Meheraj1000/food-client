@@ -13,7 +13,7 @@ const AvailableFoods = () => {
   const { data: foods = [], isLoading, isError } = useQuery({
     queryKey: ['foods'],
     queryFn: async () => {
-      const response = await axios.get('https://assignment-11-food-server-jade.vercel.app/food');
+      const response = await axios.get('https://meheraj.vercel.app/food');
       return response.data;
     },
   });

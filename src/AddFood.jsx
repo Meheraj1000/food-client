@@ -35,9 +35,10 @@ const AddFood = () => {
       donatorEmail: user.email,
       donatorImage: user.photoURL || "",
     };
+     
 
     try {
-      const response = await axios.post("https://assignment-11-food-server-jade.vercel.app/food", foodData);
+      const response = await axios.post("https://meheraj.vercel.app/food", foodData);
       if (response.data.insertedId) {
         alert("Food added successfully!");
         setFormData({

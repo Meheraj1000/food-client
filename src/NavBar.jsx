@@ -30,6 +30,7 @@ const NavBar = () => {
                     My Food Requests
                 </NavLink>
             </li>
+            
     </>
     return (
         <div className="navbar bg-base-100">

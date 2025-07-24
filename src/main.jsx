@@ -27,12 +27,12 @@ const router = createBrowserRouter([
   {
     path: "/available-foods",
     element:<AvailableFoods></AvailableFoods>,
-    // loader:()=>fetch('https://assignment-11-food-server-jade.vercel.app/food')
+    // loader:()=>fetch('https://meheraj.vercel.app/food')
   },
   {
     path: "/food/:id",
     element:<FoodDatial></FoodDatial>,
-    loader:({params})=> fetch(`https://assignment-11-food-server-jade.vercel.app/food/${params.id}`)
+    loader:({params})=> fetch(`https://meheraj.vercel.app/food/${params.id}`)
   },
   {
     path: "/add-food",

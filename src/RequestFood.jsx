@@ -11,7 +11,7 @@ const RequestFood = () => {
     useEffect(() => {
       if (user) {
         axios
-          .get(`https://assignment-11-food-server-jade.vercel.app/food-requests?email=${user.email}`)
+          .get(`https://meheraj.vercel.app/food-requests?email=${user.email}`)
           .then((res) => {
             setFoodRequests(res.data);
             setLoading(false);
