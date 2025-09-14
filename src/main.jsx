@@ -17,6 +17,10 @@ import RequestFood from './RequestFood';
 import ManageMyFoods from './ManageMyFoods';
 import Error from './Error';
 import PrivateRoute from './PrivateRoute';
+import Profile from './Profile';
+import Dashboard from './Dashboard';
+import Settings from './Settings';
+import DonateNow from './DonateNow';
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
@@ -45,6 +49,22 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element:<Register></Register>
+  },
+    {
+    path: "/dashboard",
+    element:<Dashboard></Dashboard>
+  },
+  {
+    path: "/profile",
+    element:<Profile></Profile>
+  },
+  {
+    path: "/donate-food",
+    element:<DonateNow></DonateNow>
+  },
+  {
+    path: "/settings",
+    element:<Settings></Settings>
   },
   {
     path: "/my-requests",
